@@ -1,0 +1,14 @@
+-name: Sending mail using Ansible
+hosts: localhost
+tasks: 
+
+-name: Sending mail using Mail module
+ mail: 
+host: "smtp.gmail.com
+port: 587
+username: "joesigua@gmail.com"
+password: ps123
+to: "johnsmith@gmail.com"
+subject: "Ansible report"
+body: "System <ansible_hostname> has been successfully provisioned"
+secure: starttls
